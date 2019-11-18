@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Lista de cursos{% endblock %}
+{% block content %}
+<a href="/nuevo/curso"> Agregar Curso </a>
+{% for curso in cursos %}
+<p>
+    <img src="/{{curso.imagen.url}}" width=300> 
+    <a href="/{{curso.abrev}}">{{ curso.denom }}</a>
+</p>
+{% endfor %}
+{% endblock %}
